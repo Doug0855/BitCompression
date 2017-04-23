@@ -155,139 +155,19 @@ public class Compression {
     }
 
     public static int bin_to_dec_4bit(String bin) {
-        switch(bin) {
-            case "0000":
-                return 0;
-            case "0001":
-                return 1;
-            case "0010":
-                return 2;
-            case "0011":
-                return 3;
-            case "0100":
-                return 4;
-            case "0101":
-                return 5;
-            case "0110":
-                return 6;
-            case "0111":
-                return 7;
-            case "1000":
-                return 8;
-            case "1001":
-                return 9;
-            case "1010":
-                return 10;
-            case "1011":
-                return 11;
-            case "1100":
-                return 12;
-            case "1101":
-                return 13;
-            case "1110":
-                return 14;
-            case "1111":
-                return 15;
-            default:
-                System.out.println("out of bounds error when trying to convert 4 bit bin to dec");
-                return -1;
-        }
+        return bin_to_dec(bin); 
+    }
+
+    public static int bin_to_dec(String bin) {
+    	return Integer.parseInt(bin, 2); 
     }
 
     public static int bin_to_dec_3bit(String bin) {
-        switch (bin) {
-            case "000":
-                return 0;
-            case "001":
-                return 1;
-            case "010":
-                return 2;
-            case "011":
-                return 3;
-            case "100":
-                return 4;
-            case "101":
-                return 5;
-            case "110":
-                return 6;
-            case "111":
-                return 7;
-            default:
-                System.out.println("out of bounds error when trying to convert 3 bit bin to dec");
-                return -1;
-        }
+        return bin_to_dec(bin); 
     }
 
     public static int bin_to_dec_5bit(String bin) {
-        switch (bin) {
-            case "00000":
-                return 0;
-            case "00001":
-                return 1;
-            case "00010":
-                return 2;
-            case "00011":
-                return 3;
-            case "00100":
-                return 4;
-            case "00101":
-                return 5;
-            case "00110":
-                return 6;
-            case "00111":
-                return 7;
-            case "01000":
-                return 8;
-            case "01001":
-                return 9;
-            case "01010":
-                return 10;
-            case "01011":
-                return 11;
-            case "01100":
-                return 12;
-            case "01101":
-                return 13;
-            case "01110":
-                return 14;
-            case "01111":
-                return 15;
-            case "10000":
-                return 16;
-            case "10001":
-                return 17;
-            case "10010":
-                return 18;
-            case "10011":
-                return 19;
-            case "10100":
-                return 20;
-            case "10101":
-                return 21;
-            case "10110":
-                return 22;
-            case "10111":
-                return 23;
-            case "11000":
-                return 24;
-            case "11001":
-                return 25;
-            case "11010":
-                return 26;
-            case "11011":
-                return 27;
-            case "11100":
-                return 28;
-            case "11101":
-                return 29;
-            case "11110":
-                return 30;
-            case "11111":
-                return 31;
-            default:
-                System.out.println("out of bounds error when trying to convert 4 bit bin to dec");
-                return -1;
-        }
+        return bin_to_dec(bin); 
     }
 
     private static ArrayList<String> input_parse(ArrayList<String> uncompressedContainer) throws IOException {
